@@ -1,5 +1,16 @@
+var time = localStorage.getItem("time");
+
 var myfunc = setInterval(function() {
-    // code goes here
+    var secondsLeft = time --
+    var timer = document.getElementById("timer")
+    timer.innerHTML = secondsLeft
+    localStorage.setItem("time", secondsLeft)
+    if (secondsLeft == 0){
+        clearTimeout(secondsLeft)
+    }
+    function wrongAnswer(){
+        secondsLeft = secondsLeft - 10;
+    }
     }, 1000)
 
 
